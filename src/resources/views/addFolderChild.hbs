@@ -1,0 +1,12 @@
+<form action="/tai-lieu/them-folder" method="post">
+
+    <select name="slcDocFolder" id="">
+        {{#each data }}
+            <option value="{{this._id}}">{{this.Name}}</option>
+        {{/each}}
+    </select>
+    <input type="text" name="txtDocFolderChild_title" placeholder="Tiêu đề thư mục">
+    <input type="text" name="txtDocFolderChild_desc"  placeholder="Mô tả">
+    <input type="submit" value="Thêm mới thư mục">
+
+</form>

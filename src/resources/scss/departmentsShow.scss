@@ -1,0 +1,39 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%; 
+}
+
+
+// .card {
+//     margin: 30px;
+//     text-align: center;
+// }
+
+// .card img {
+//     width: 50%;
+//     height: 90%;
+//     text-align: center;
+// }
+
+// .container {
+//     display: flex;
+//     justify-content: center;
+//     flex-wrap: wrap;
+// }
+
+.card{
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.box {
+    display: flex;
+}

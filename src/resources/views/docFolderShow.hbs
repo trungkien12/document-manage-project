@@ -1,0 +1,47 @@
+<style>
+
+    * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%; }
+
+.card {
+  margin: 10px;
+  text-align: center; }
+
+.card img {
+  width: 30%;
+  height: 100%;
+  text-align: center; }
+
+.box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.card-body {
+    padding: 5px 0;
+}
+
+</style>
+
+
+<div class="box">
+
+  {{#each docfolder }}
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{this.Name}}</h5>
+      <div class="button">
+          <a href="/tai-lieu/danh-sach-tai-lieu/{{this._id}}" class="btn btn-primary">Xem thêm</a>
+          <a href="#" class="btn btn-primary">Sửa</a>
+          <a href="#" class="btn btn-primary">Xoá</a>
+      </div>
+    </div>
+  </div>
+
+  {{/each}}
+
+</div>

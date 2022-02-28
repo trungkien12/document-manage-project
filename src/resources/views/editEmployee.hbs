@@ -1,0 +1,41 @@
+
+
+{{#with data}}
+<form action="/nhan-vien/sua-thong-tin-nv" method="post" enctype="multipart/form-data">
+  <div class="row">
+    <div class="col">
+      <input type="hidden" name="IDChar" value="{{this._id}}">
+      Tên đăng nhập: <input type="text" value="{{this.Username}}" name="txtUsername">      
+      Mật khẩu:      <input type="text" value="{{this.Password}}" name="txtPassword">           
+      Email:         <input type="text" value="{{this.Email}}" name="txtEmail">                 
+      Điện thoại:    <input type="text" value="{{this.Dienthoai}}" name="txtDienthoai">       
+      <br>
+      Phòng ban: <br>
+      <select name="slcDepartments" style="width: 185px">
+        {{#each department }}
+            <option value="{{this._id}}">
+                {{this.Name}}
+            </option>
+        {{/each}}
+      </select> 
+      <br>
+      Ảnh đại diện: <br>
+      <img src="/upload/{{this.Avatar}}" alt="" style="width: 80px">  
+      <input type="file" name="txtAvatar">
+    </div>
+    <div class="col">
+      Họ và tên: <input type="text" value="{{this.Hoten}}" name="txtName">              
+      Quên quán: <input type="text" value="{{this.Quequan}}" name="txtQuequan">           
+      Giới tính: <input type="text" value="{{this.Gioitinh}}" name="txtGioitinh">          
+      Ngày sinh: <input type="text" value="{{this.NgaySinh}}" name="txtNgaysinh">          
+      Số CMND:   <input type="text" value="{{this.Cmnd}}" name="txtCmnd">                
+      Ngày cấp:  <input type="text" value="{{this.Ngaycap}}" name="txtNgaycap">            
+      Nơi cấp:   <input type="text" value="{{this.Noicap}}" name="txtNoicap">              
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <input class="btn btn-primary" type="submit" id="submit" value="Sửa thông tin nhân viên">
+  </div>
+</form>
+{{/with}}

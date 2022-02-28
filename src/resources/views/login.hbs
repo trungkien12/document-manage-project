@@ -1,0 +1,53 @@
+<style>
+
+    * {
+        margin: 0;
+    }
+    .header {
+        width: 100%;
+        height: 40px;
+        background-color: #0078b1;
+    }
+
+    form {
+        text-align: center;
+        margin-top: 20vh;
+        height: 72%;
+    }
+
+    form p {
+        text-transform: capitalize;
+        font-size: 23px;
+    }
+
+    .username,
+    .password {
+        text-transform: capitalize;
+    }   
+
+    .submit input{
+        margin: 20px 0;
+        background-color: #0078b1;
+        color: #FFF;
+    }
+
+    .footer {
+        border-top: 1px gray solid;
+        line-height: 20px;
+    }
+
+</style>
+
+<div class="header"></div>
+
+<form action="/login", method="post">
+    <p>sign in</p> <br>
+    <div class="username">username: <input type="text", name="txtUsername"></div> <br>
+    <div class="password">password: <input type="password", name="txtPassword"> <br></div>
+    <div class="submit"><input type="submit" value="Đăng nhập"></div>
+</form>
+
+<div class="footer">
+    Công ty TNHH dịch thuật và đào tạo Vạn Tín
+</div>
+

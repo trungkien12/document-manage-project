@@ -1,0 +1,46 @@
+
+{{!-- <form action="/quan-ly-he-thong/them-phong" method="post">
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Tên Phòng</label>
+    <input type="text"  name="txtName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Mô tả</label>
+    <input type="text" name="txtDesc" class="form-control" id="exampleInputPassword1">
+  </div>
+  <input type="submit"  value="Thêm mới phòng ban" class="btn btn-primary"></input>
+
+</form> --}}
+
+<head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="/css/addDoc.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="containers">
+    <div class="title">Thêm phòng ban mới</div>
+    <div class="content">
+      
+      <form action="/phong-ban/them-phong" method="post">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Tên phòng</span>
+            <input type="text" placeholder="Nhập vào tên phòng ban" name="txtName" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Mô tả</span>
+            <input type="text" placeholder="Mô tả về phòng ban mới" name="txtDesc" required>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Tải lên">
+        </div>
+      </form>
+
+    </div>
+  </div>
+</body>

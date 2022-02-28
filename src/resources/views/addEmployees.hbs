@@ -1,0 +1,80 @@
+<head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="/css/addDoc.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="containers">
+    <div class="title">Thêm nhân viên mới</div>
+    <div class="content">
+      <form action="/nhan-vien" method="post" enctype="multipart/form-data">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Tên đăng nhập</span>
+            <input type="text" placeholder="Nhập vào tên đăng nhập" name="txtUsername" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Mật khẩu</span>
+            <input type="text" placeholder="Nhập vào mật khẩu" name="txtPassword" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" placeholder="Nhập vào địa chỉ Email" name="txtEmail" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Số điện thoại</span>
+            <input type="text" placeholder="Nhập vào số điện thoại nhân viên" name="txtDienthoai" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Họ và tên</span>
+            <input type="text" placeholder="Họ và tên" name="txtName" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Quê quán</span>
+            <input type="text" placeholder="Quên quán" name="txtQuequan" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Giới tính</span>
+            <input type="text" placeholder="Giới tính" name="txtGioitinh" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Ngày sinh</span>
+            <input type="text" placeholder="Ngày sinh" name="txtNgaysinh" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Số CMND</span>
+            <input type="text" placeholder="Số CMND" name="txtCmnd" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Ngày cấp</span>
+            <input type="text" placeholder="Ngày cấp" name="txtNgaycap" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Nơi cấp</span>
+            <input type="text" placeholder="Nơi cấp" name="txtNoicap" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phòng ban</span>
+            <select name="slcDepartments" class="typeDoc">
+              {{#each department }}
+                  <option value="{{this._id}}">
+                      {{this.Name}}
+                  </option>
+              {{/each}}
+            </select> 
+          </div>
+          <div class="input-box">
+            <span class="details">Ảnh đại diện</span>
+            <input type="file" placeholder="Confirm your password" name="txtAvatar" required>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Tải lên">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>

@@ -1,0 +1,15 @@
+
+<head>
+  <link rel="stylesheet" href="/css/departmentsShow.css">
+</head>
+
+<div class="box">
+
+    {{#each department }}
+      <div class="card">
+        <a> {{this.Name}} </a>
+        <a href="/nhan-vien/tat-ca-nv/{{this._id}}">Xem thêm</a>
+      </div>
+    {{/each}}
+
+</div>

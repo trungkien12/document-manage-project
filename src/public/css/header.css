@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%; }
+
+.header {
+  padding: 10px 13%;
+  display: flex; }
+
+.header__logo img {
+  width: 60%;
+  height: 90%; }
+
+.header__logo {
+  flex: 1; }
+
+.header__navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 3; }
+
+.header__navbar a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+  font-weight: 500; }

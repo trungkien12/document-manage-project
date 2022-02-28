@@ -1,0 +1,71 @@
+
+{{!-- <form action="/tai-lieu" method="post" enctype="multipart/form-data">
+    
+    <span>Loại tài liệu: </span>
+    <select name="slcCategory">
+        {{#each category }}
+            <option value="{{this._id}}">
+                {{this.Name}}
+            </option>
+        {{/each}}
+    </select>
+    <br>
+    <input type="text" name="txtName"       placeholder="Tên tài liệu">     <br>
+    <input type="text" name="txtNode"       placeholder="Ghi chú">          <br>
+    <p>File đính kèm</p>
+    <input type="file" name="txtFile"       placeholder="File đính kèm">    <br>
+    <input type="text" name="txtcreat_by"   placeholder="Người tạo">        <br>
+    <input type="submit" value="ADD NEW DOCUMENT">
+
+</form> --}}
+
+<head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="/css/addDoc.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="containers">
+    <div class="title">Thêm tài liệu mới</div>
+    <div class="content">
+      
+      <form action="/tai-lieu" method="post" enctype="multipart/form-data">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Loại tài liệu</span>
+            {{!-- <input type="text" placeholder="Enter your name" required> --}}
+                <select name="slcCategory" class="typeDoc">
+                    {{#each category }}
+                        <option value="{{this._id}}">
+                            {{this.Name}}
+                        </option>
+                    {{/each}}
+                </select>
+          </div>
+          <div class="input-box">
+            <span class="details">Tên tài liệu</span>
+            <input type="text" placeholder="Nhập vào tên tài liệu" name="txtName" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Người tạo</span>
+            <input type="text" placeholder="Nhập vào tên nhân viên tạo" name="txtcreat_by" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Ghi chú</span>
+            <input type="text" placeholder="Ghi chú cho tài liệu" name="txtNode" required>
+          </div>
+          <div class="input-box">
+            <span class="details">File đính kèm</span>
+            <input type="file" placeholder="File đính kèm" name="txtFile" required>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Tải lên">
+        </div>
+      </form>
+
+    </div>
+  </div>
+</body>
